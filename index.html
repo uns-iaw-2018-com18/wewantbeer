@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>We Want Beer</title>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="js/index-actions.js"></script>
+  </head>
+
+  <body>
+    <a id="login-btn" class href="#" onclick="return false">Ingresar</a>
+
+    <nav>
+      <a id="main-logo" href="index.html"></a>
+
+      <div id="search-container">
+        <form>
+          <input id="search-input" type="search" placeholder="Buscar cervecería" aria-label="Buscar cerveceria">
+          <button id="search-btn" type="submit" aria-label="Buscar"></button>
+        </form>
+      </div>
+    </nav>
+
+    <div id="main-container">
+      <table id="bar-logos-table">
+        <!-- Links a las cervecerias -->
+      </table>
+      <div id="arrow-container"><a id="show-more-arrow" href="#"></a></div>
+    </div>
+
+    <div id="map-container">
+      <div id="map">
+        <!-- Mapa -->
+      </div>
+    </div>
+
+    <div id="inform-container">
+      <span id="inform-text">¿Tu cervecería no aparece?</span>
+      <a id="inform-btn" href="#" onclick="return false">Avisanos</a>
+    </div>
+
+    <footer>
+        <div id="footer-container">
+          <div id="top-footer-container">
+            Beber con moderación. Prohibida su venta a menores de 18 años.<br>
+            Los nombres, marcas, y logotipos relacionados son propiedad de sus respectivos dueños.
+          </div>
+          <div id="bottom-footer-container">
+            <span id="coded-icon"></span> con <span id="love-icon"></span> por <a class="github-user-link" href="https://github.com/rodrigo102195" target="_blank">Rodrigo Licata</a> y <a class="github-user-link" href="https://github.com/DamianNud" target="_blank">Damián Nudelman</a>. © 2018.
+          </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
