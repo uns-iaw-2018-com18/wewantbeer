@@ -8,7 +8,8 @@ $(function() {
     } else {
       var obj = $.grep(data, function(obj){return obj.id === id;})[0]; // Buscar elemento usando jQuery
       if (obj === undefined) { // Si no se encontro el id
-        document.getElementById("main-container").innerHTML = "No se encontro";
+        $("#main-container").html("<span id='notfound-text'>No se pudo encontrar la búsqueda \"" + id + "\"</span>");
+        $("#main-container").append("<span id='notfound-text'><a id='notfound-link' href='index.html'>Volver al inicio</a></span>");
       } else {
         cerveceria = obj;
         mostrarInfo();
@@ -37,7 +38,7 @@ function mostrarInfo() {
     $("#info-phone-text").hide();
   }
   if (cerveceria.horario[hoy].localeCompare("") != 0) {
-    var weekdays = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+    var weekdays = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
     if (cerveceria.horario[hoy].localeCompare("Cerrado") != 0) {
       $("#info-time-text").html("Horario: " + weekdays[hoy] + " " + cerveceria.horario[hoy] + "<br>");
     } else {
@@ -71,26 +72,68 @@ function mostrarInfo() {
 }
 
 function mostrarPuntaje(cerveceria) {
-  var rating = 0;
-  if (cerveceria.cantidadPuntajes > 0) {
-    rating = cerveceria.sumaPuntajes / cerveceria.cantidadPuntajes;
-  }
-  rating = rating.toFixed(1);
+  var initialLocalRating = localStorage.getItem("rating_" + cerveceria.id);
+  var totalRating = calculateRating(initialLocalRating);
 
-  var stars = rating + " ";
-  for (var index = 0; index < Math.floor(rating); index++) {
-    stars += "<span class='full-star-icon'></span>";
+  $("#fontawesome-rating").barrating({
+      theme: "fontawesome-stars",
+      showSelectedRating: false,
+      deselectable: false,
+      allowEmpty: true,
+      initialRating: totalRating,
+      onSelect: function(value, text, event) {
+        if (typeof(event) !== "undefined") {
+          // El puntaje fue seleccionado por el usuario
+          var toShow = calculateRating(value);
+          localStorage.setItem("rating_" + cerveceria.id, value);
+          $("#info-rating-number").html(toShow);
+          $("#fontawesome-rating").barrating("readonly", true);
+          $("#fontawesome-rating").barrating("set", toShow);
+          $("#user-rating-value").html(value);
+          $("#user-rating").show();
+          $("#delete-user-rating").show();
+      }
+    }
+  });
+
+  $("#info-rating-number").html(totalRating);
+  if (initialLocalRating != null) {
+    $("#fontawesome-rating").barrating("readonly", true);
+    $("#user-rating-value").html(initialLocalRating);
+    $("#user-rating").show();
+    $("#delete-user-rating").show();
   }
-  var remaining = 5 - Math.floor(rating);
-  if (rating - Math.floor(rating) != 0) {
-    stars += "<span class='half-star-icon'></span>";
-    remaining--;
-  }
-  for (var index = 0; index < remaining; index++) {
-    stars += "<span class='empty-star-icon'></span>";
-  }
-  $("#rating-container").html(stars);
 }
+
+function calculateRating(localRating) {
+  var rating = 0;
+  var usersThatRated = cerveceria.cantidadPuntajes;
+  var ratingSum = cerveceria.sumaPuntajes;
+  if (localRating != null) {
+    usersThatRated += 1;
+    ratingSum += Number(localRating);
+  }
+  if (usersThatRated > 0) {
+    rating = Math.round(ratingSum / usersThatRated);
+  }
+  return rating;
+}
+
+$(function() {
+  $("#delete-user-rating").click(function() {
+    var toShow = calculateRating(undefined);
+    localStorage.removeItem("rating_" + cerveceria.id);
+    $("#user-rating").hide();
+    if (toShow == 0) {
+      $("#fontawesome-rating").barrating("set", "");
+    } else {
+      $("#fontawesome-rating").barrating("set", toShow);
+    }
+    $("#fontawesome-rating").barrating("readonly", false);
+    $("#info-rating-number").html(toShow);
+    return false;
+  });
+});
 
 function initMap() {
   var cerveceriaCoordenadas = new google.maps.LatLng(cerveceria.latitud, cerveceria.longitud);

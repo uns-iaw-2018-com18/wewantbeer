@@ -31,7 +31,7 @@ function mostrarCervecerias(maxRows) {
 
 // Mostrar mas cervecerias y animar el scroll hacia abajo
 $(function() {
-  $("#show-more-arrow").click(function() {
+  $("#arrow-container").click(function() {
     mostrarCervecerias(2); // Mostrar 2 filas
     $("html, body").animate({scrollTop: $("#map-container").offset().top - $(window).height()}, 1000);
     return false;
@@ -49,7 +49,9 @@ function getNamesFromJSON(cervecerias) {
 $(function() {
   $("#search-input").keyup(function(event) {
     if (event.keyCode === 13) {
-      goToSearch();
+      if (inputValue.localeCompare("") != 0) {
+        goToSearch(inputValue);
+      }
     }
     return false;
   });
@@ -57,18 +59,20 @@ $(function() {
 
 $(function() {
   $("#search-btn").click(function() {
-    goToSearch();
+    var inputValue = $("#search-input").val();
+    if (inputValue.localeCompare("") != 0) {
+      goToSearch(inputValue);
+    }
     return false;
   });
 });
 
-function goToSearch() {
-  var inputValue = document.getElementById("search-input").value;
-  var id = getIdByName(inputValue);
+function goToSearch(value) {
+  var id = getIdByName(value);
   if (id !== undefined) {
     window.location.href = "bar.html?id=" + id;
   } else {
-    window.location.href = "bar.html?id=" + inputValue.toLowerCase().replace(/\s+/g, '_');
+    window.location.href = "bar.html?id=" + value.toLowerCase().replace(/\s+/g, '_');
   }
 }
 
@@ -91,9 +95,9 @@ $.ui.autocomplete.filter = function (array, term) {
 
 function initMap() {
   // Inicializar el mapa en Bahia Blanca
-  var bahiaBlanca = new google.maps.LatLng(-38.7142348, -62.2698903);
+  var bahiaBlanca = new google.maps.LatLng(-38.7050295, -62.2682321);
   var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 11,
+    zoom: 13,
     center: bahiaBlanca,
     styles: [
       {
