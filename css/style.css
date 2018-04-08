@@ -234,11 +234,11 @@ body {
   font-size: 21px;
 }
 
-#coded-icon {
+#code-icon {
   height: 15px;
   width: 22px;
   display: inline-block;
-  background: url('../media/icons/coded.svg') 0 0 no-repeat;
+  background: url('../media/icons/code.svg') 0 0 no-repeat;
   background-size: 100%;
   background-position: center;
 }
@@ -263,6 +263,8 @@ body {
 }
 
 #info-bar-picture {
+  height: 250px;
+  width: 520px;
   margin: 10px;
   float: right;
 }

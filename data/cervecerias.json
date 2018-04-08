@@ -15,8 +15,7 @@
     "latitud": -38.709178,
     "longitud": -62.264594999999986,
     "facebook": "Baronebrewing",
-    "instagram": "baronebrewing",
-    "embedInstagram": "https://www.instagram.com/p/Bgtj56vh3c8/embed"
+    "instagram": "baronebrewing"
   },
   {
     "id": "bronx",
@@ -34,8 +33,7 @@
     "latitud": -38.7037864,
     "longitud": -62.26229319999999,
     "facebook": "bronxcerveceria",
-    "instagram": "bronxcerveceria",
-    "embedInstagram": "https://www.instagram.com/p/BgrS3QInZzk/embed"
+    "instagram": "bronxcerveceria"
   },
   {
     "id": "antares",
@@ -53,8 +51,7 @@
     "latitud": -38.7091055,
     "longitud": -62.26463720000004,
     "facebook": "AntaresBahiaOficial",
-    "instagram": "antaresbahia",
-    "embedInstagram": "https://www.instagram.com/p/BEPVgHhqzAo/embed"
+    "instagram": "antaresbahia"
   },
   {
     "id": "columbus",
@@ -72,8 +69,7 @@
     "latitud": -38.718369,
     "longitud": -62.2727074,
     "facebook": "cerveceriacolumbus",
-    "instagram": "cerveceriacolumbus",
-    "embedInstagram": ""
+    "instagram": "cerveceriacolumbus"
   },
   {
     "id": "las_tias",
@@ -91,8 +87,7 @@
     "latitud": -38.7041177,
     "longitud": -62.26884970000003,
     "facebook": "LasTiasCerveceria",
-    "instagram": "lastiasbar",
-    "embedInstagram": "https://www.instagram.com/p/Bgg83MNlgEE/embed"
+    "instagram": "lastiasbar"
   },
   {
     "id": "rostok",
@@ -110,8 +105,7 @@
     "latitud": -38.709376,
     "longitud": -62.25334290000001,
     "facebook": "Rostokbh",
-    "instagram": "rostokbh",
-    "embedInstagram": "https://www.instagram.com/p/BgwHmjZggVb/embed"
+    "instagram": "rostokbh"
   },
   {
     "id": "wir_konnen",
@@ -129,8 +123,7 @@
     "latitud": -38.7076554,
     "longitud": -62.26256599999999,
     "facebook": "Wir-Konnen-902683613146074",
-    "instagram": "wirkonnen",
-    "embedInstagram": ""
+    "instagram": "wirkonnen"
   },
   {
     "id": "mulaika",
@@ -148,8 +141,7 @@
     "latitud": -38.702096,
     "longitud": -62.270849999999996,
     "facebook": "mulaikabar",
-    "instagram": "mulaika_bar",
-    "embedInstagram": ""
+    "instagram": "mulaika_bar"
   },
   {
     "id": "bar",
@@ -167,8 +159,7 @@
     "logo": "media/logos/bar.jpg",
     "foto": "media/pictures/bar.jpg",
     "facebook": "BarBuenosamigosreunidos",
-    "instagram": "buenosamigosreunidos",
-    "embedInstagram": ""
+    "instagram": "buenosamigosreunidos"
   },
   {
     "id": "colonial",
@@ -186,8 +177,7 @@
     "logo": "media/logos/colonial.jpg",
     "foto": "media/pictures/colonial.jpg",
     "facebook": "colonialcerveceria",
-    "instagram": "",
-    "embedInstagram": ""
+    "instagram": ""
   },
   {
     "id": "don_tomas",
@@ -205,8 +195,7 @@
     "logo": "media/logos/don_tomas.jpg",
     "foto": "media/pictures/don_tomas.jpg",
     "facebook": "DonTomasBahiaBlanca",
-    "instagram": "",
-    "embedInstagram": ""
+    "instagram": ""
   },
   {
     "id": "mr_lewis",
@@ -224,8 +213,7 @@
     "logo": "media/logos/mr_lewis.jpg",
     "foto": "media/pictures/mr_lewis.jpg",
     "facebook": "MrLewisCerveceria",
-    "instagram": "mrlewiscerveceria",
-    "embedInstagram": ""
+    "instagram": "mrlewiscerveceria"
   },
   {
     "id": "la_escondida",
@@ -243,8 +231,7 @@
     "logo": "media/logos/la_escondida.jpg",
     "foto": "media/pictures/la_escondida.jpg",
     "facebook": "laescondidaparadorbb",
-    "instagram": "laescondidaok",
-    "embedInstagram": ""
+    "instagram": "laescondidaok"
   },
   {
     "id": "york",
@@ -262,8 +249,7 @@
     "logo": "media/logos/york.jpg",
     "foto": "media/pictures/york.jpg",
     "facebook": "yorkfoodbeer",
-    "instagram": "",
-    "embedInstagram": ""
+    "instagram": ""
   },
   {
     "id": "el_beer_club",
@@ -281,8 +267,7 @@
     "logo": "media/logos/el_beer_club.jpg",
     "foto": "media/pictures/el_beer_club.jpg",
     "facebook": "ElBeerClub",
-    "instagram": "elbeerclubcerveceria",
-    "embedInstagram": ""
+    "instagram": "elbeerclubcerveceria"
   },
   {
     "id": "olaf",
@@ -300,8 +285,7 @@
     "logo": "media/logos/olaf.jpg",
     "foto": "media/pictures/olaf.jpg",
     "facebook": "cerveceriaOlaf",
-    "instagram": "olafbarbahiablanca",
-    "embedInstagram": ""
+    "instagram": "olafbarbahiablanca"
   },
   {
     "id": "centrico",
@@ -319,8 +303,7 @@
     "logo": "media/logos/centrico.jpg",
     "foto": "media/pictures/centrico.jpg",
     "facebook": "Centrico-Pizza-and-Beer-1587351704643746",
-    "instagram": "centricobar",
-    "embedInstagram": ""
+    "instagram": "centricobar"
   },
   {
     "id": "newtown",
@@ -338,7 +321,6 @@
     "logo": "media/logos/newtown.jpg",
     "foto": "media/pictures/newtown.jpg",
     "facebook": "Newtownbeer",
-    "instagram": "",
-    "embedInstagram": ""
+    "instagram": ""
   }
 ]

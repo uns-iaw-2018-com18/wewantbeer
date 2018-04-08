@@ -53,7 +53,7 @@ function mostrarInfo() {
     $("#info-happyhour-text").hide();
   }
   if (cerveceria.web.localeCompare("") != 0) {
-    $("#info-web-text").html("Web: <a class='info-link' href='http://" + cerveceria.web + "/' target='_blank'>" + cerveceria.web + "</a><br>");
+    $("#info-web-text").html("Web: <a class='info-link' href='http://" + cerveceria.web + "/' target='_blank' rel='noopener'>" + cerveceria.web + "</a><br>");
   } else {
     $("#info-web-text").hide();
   }
@@ -63,10 +63,10 @@ function mostrarInfo() {
     $("#info-email-text").hide();
   }
   if (cerveceria.instagram.localeCompare("") != 0) {
-    $("#info-social-network-links").append("<a id='info-instagram-icon' href='https://www.instagram.com/" + cerveceria.instagram + "/' target='_blank'></a>");
+    $("#info-social-network-links").append("<a id='info-instagram-icon' href='https://www.instagram.com/" + cerveceria.instagram + "/' target='_blank' rel='noopener'></a>");
   }
   if (cerveceria.facebook.localeCompare("") != 0) {
-    $("#info-social-network-links").append("<a id='info-facebook-icon' href='https://www.facebook.com/" + cerveceria.facebook + "/' target='_blank'></a>");
+    $("#info-social-network-links").append("<a id='info-facebook-icon' href='https://www.facebook.com/" + cerveceria.facebook + "/' target='_blank' rel='noopener'></a>");
   }
   mostrarPuntaje(cerveceria);
 }
