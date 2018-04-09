@@ -1,9 +1,8 @@
 body {
   margin: 0 !important;
   padding: 0 !important;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   overflow: auto;
-  resize: both;
 }
 
 #login-btn {
@@ -342,6 +341,12 @@ body {
   float: right;
   margin: 0 20px 0 0;
 }
+
+  /* Precargar icono */
+  #rating-container:after {
+    display: none;
+    content: url('../media/icons/delete.svg');
+  }
 
 #info-rating-number {
   line-height: normal;

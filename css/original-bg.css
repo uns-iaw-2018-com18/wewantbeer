@@ -3,4 +3,5 @@ body {
   background-size: 100%, 50%;
   background-repeat: no-repeat, repeat;
   background-position: center top, center top;
+  resize: both;
 }
