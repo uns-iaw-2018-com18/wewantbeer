@@ -125,7 +125,7 @@ $(function() {
     localStorage.removeItem("rating_" + cerveceria.id);
     $("#user-rating").hide();
     if (toShow == 0) {
-      $("#fontawesome-rating").barrating("set", "");
+      $("#fontawesome-rating").barrating("clear");
     } else {
       $("#fontawesome-rating").barrating("set", toShow);
     }

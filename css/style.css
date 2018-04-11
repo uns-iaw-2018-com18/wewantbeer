@@ -2,6 +2,7 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   font-family: 'Roboto', Arial, sans-serif;
+  background-color: #262626; /* Evitar flash */
   overflow: auto;
 }
 
@@ -453,6 +454,13 @@ body {
   margin-right: 5px;
 }
 
+.br-theme-fontawesome-stars .br-widget a:after {
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
 .br-theme-fontawesome-stars .br-widget a.br-active:after, .br-theme-fontawesome-stars .br-widget a.br-selected:after {
   color: black;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
