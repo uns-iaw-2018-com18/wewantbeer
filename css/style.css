@@ -6,6 +6,10 @@ body {
   overflow: auto;
 }
 
+input {
+  font-size: 16px; /* Evitar zoom movil */
+}
+
 #login-btn {
   height: auto;
   width: auto;
@@ -297,6 +301,8 @@ body {
 }
 
 #info-time-text {
+  float: left;
+  margin: 0 5px 0 0;
   background: url('../media/icons/time.svg') 0 0 no-repeat;
   background-size: 20px;
   background-position: left;
@@ -365,18 +371,51 @@ body {
 #delete-user-rating {
   height: 16px;
   width: 16px;
-  display: block;
+  display: inline-block;
   background: url('../media/icons/delete.svg') 0 0 no-repeat;
   background-size: 100%;
   background-position: center;
-  float: right;
   margin: 3px 0 0 5px;
+}
+
+#time-box {
+	float: left;
+	height: auto;
+	width: auto;
+}
+
+#today-time {
+	display: block;
+  cursor: pointer;
+}
+
+#hidden-days-list {
+	display: none;
+}
+
+.info-text {
+	display: block;
+  clear: left;
+}
+
+#expand-arrow {
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  background: url('../media/icons/expand-arrow.svg') 0 0 no-repeat;
+  background-size: 100%;
+  background-position: center;
+  margin: 0 0 0 5px;
+}
+
+.expanded-arrow {
+  transform: rotate(180deg);
 }
 
 #info-social-network-links {
   height: auto;
   width: auto;
-  display: inline-block;
+  display: block;
   float: right;
   margin: -30px 0;
 }
@@ -384,22 +423,20 @@ body {
 #info-facebook-icon {
   height: 30px;
   width: 30px;
-  display: block;
+  display: inline-block;
   background: url('../media/icons/facebook.svg') 0 0 no-repeat;
   background-size: 100%;
   background-position: center;
-  float: right;
   margin: 0 0 0 15px;
 }
 
 #info-instagram-icon {
   height: 30px;
   width: 30px;
-  display: block;
+  display: inline-block;
   background: url('../media/icons/instagram.svg') 0 0 no-repeat;
   background-size: 100%;
   background-position: center;
-  float: right;
   margin: 0 0 0 15px;
 }
 
