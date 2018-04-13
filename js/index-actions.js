@@ -5,10 +5,7 @@ $(function() {
   $.get("data/cervecerias.json", function(data, status) {
     cervecerias = shuffle(data);
     mostrarCervecerias(3); // Mostrar 3 filas
-    var availableTags = getNamesFromJSON(cervecerias);
-    $("#search-input").autocomplete({
-      source: availableTags
-    });
+    loadSearch();
     $("body").append("<script async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC6UheGSM6zHbQvf0MU5zSrdZNJCdMrZoQ&callback=initMap'></script>");
   });
 });
@@ -37,61 +34,6 @@ $(function() {
     return false;
   });
 });
-
-function getNamesFromJSON(cervecerias) {
-  var names = [];
-  for (var i = 0; i < cervecerias.length; i++) {
-    names.push(cervecerias[i].nombre);
-  }
-  return names;
-}
-
-$(function() {
-  $("#search-input").keyup(function(event) {
-    if (event.keyCode === 13) {
-      if (inputValue.localeCompare("") != 0) {
-        goToSearch(inputValue);
-      }
-    }
-    return false;
-  });
-});
-
-$(function() {
-  $("#search-btn").click(function() {
-    var inputValue = $("#search-input").val();
-    if (inputValue.localeCompare("") != 0) {
-      goToSearch(inputValue);
-    }
-    return false;
-  });
-});
-
-function goToSearch(value) {
-  var id = getIdByName(value);
-  if (id !== undefined) {
-    window.location.href = "bar.html?id=" + id;
-  } else {
-    window.location.href = "bar.html?id=" + value.toLowerCase().replace(/\s+/g, '_');
-  }
-}
-
-function getIdByName(name) {
-  var id;
-  var obj = $.grep(cervecerias, function(obj){return obj.nombre === name;})[0]; // Buscar elemento usando jQuery
-  if (obj !== undefined) {
-    id = obj.id;
-  }
-  return id;
-}
-
-// Overrides the default autocomplete filter function to search only from the beginning of the string
-$.ui.autocomplete.filter = function (array, term) {
-    var matcher = new RegExp("^" + $.ui.autocomplete.escapeRegex(term), "i");
-    return $.grep(array, function (value) {
-        return matcher.test(value.label || value.value || value);
-    });
-};
 
 function initMap() {
   // Inicializar el mapa en Bahia Blanca

@@ -7,7 +7,7 @@ body {
 }
 
 input {
-  font-size: 16px; /* Evitar zoom movil */
+  font-size: 28px; /* Evitar zoom movil */
 }
 
 #login-btn {
