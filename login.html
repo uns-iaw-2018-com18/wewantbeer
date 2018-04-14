@@ -3,7 +3,7 @@
   <head>
     <title>We Want Beer</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=830">
+    <meta name="viewport" content="width=600">
     <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous">
@@ -12,15 +12,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/original-bg.css">
+    <link rel="stylesheet" href="css/login.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-    <script src="js/index-actions.js"></script>
     <script src="js/style-toggle.js"></script>
-    <script src="js/search.js"></script>
+
+
   </head>
 
   <body>
-    <a id="login-btn" class href="login.html" >Ingresar</a>
     <label id="style-toggle-switch">
       <input id="switch-checkbox" type="checkbox" checked="checked">
       <span id="switch-slider"></span>
@@ -38,32 +38,20 @@
 
     <nav>
       <a id="main-logo" href="index.html" aria-label="Logo de We Want Beer"></a>
-
-      <div id="search-container">
-        <form>
-          <input id="search-input" type="search" placeholder="Buscar cervecería" aria-label="Buscar cerveceria">
-          <button id="search-btn" type="submit" aria-label="Buscar"></button>
-        </form>
-      </div>
     </nav>
+			<div class="loginmodal-container">
+        <form action="php/form_handler.php" method="post" onsubmit="pwd_handler(this)">
+					<input type="text" name="user" placeholder="Nombre de usuario" maxlength="128" required="" oninvalid="this.setCustomValidity('Ingrese un usuario')" oninput="setCustomValidity('')">
+					<input type="password" name="password" placeholder="Contraseña" maxlength="128" required="" oninvalid="this.setCustomValidity('Ingrese una contraseña')" oninput="setCustomValidity('')">
+          <input type="hidden" name="md5password" value="" />
+					<input type="submit" name="login" class="login loginmodal-submit" value="Ingresar">
+				 </form>
+				 <div class="login-help">
+					<a href="#">¿No tenes cuenta? Registrate</a>
+				 </div>
+			</div>
 
-    <div id="main-container">
-      <table id="bar-logos-table">
-        <!-- Links a las cervecerias -->
-      </table>
-      <div id="arrow-container"><a id="show-more-arrow" href="#" aria-label="Mostrar mas cervecerias"></a></div>
-    </div>
 
-    <div id="map-container">
-      <div id="map">
-        <!-- Mapa -->
-      </div>
-    </div>
-
-    <div id="inform-container">
-      <span id="inform-text">¿Tu cervecería no aparece?</span>
-      <a id="inform-btn" href="#" onclick="return false">Avisanos</a>
-    </div>
 
     <footer>
         <div id="footer-container">
@@ -76,5 +64,8 @@
           </div>
         </div>
     </footer>
+
+    <script type="text/javascript"src="https://rawgit.com/blueimp/JavaScript-MD5/master/js/md5.min.js"></script>
+    <script src="js/login-actions.js"></script>
   </body>
 </html>
