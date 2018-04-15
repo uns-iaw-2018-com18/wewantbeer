@@ -8,7 +8,7 @@ Hace uso de:
 * [jQuery UI 1.12.1](https://jqueryui.com/)
 * [Google Maps API](https://developers.google.com/maps/)
 * [Normalize.css 8.0.0](https://necolas.github.io/normalize.css/)
-* [Popper.js 1.12.9](https://popper.js.org/)
 * [jQuery Bar Rating 1.2.2](https://github.com/antennaio/jquery-bar-rating)
 * [Font Awesome 4.7.0](https://fontawesome.com/)
 * [Google Fonts](https://fonts.google.com/)
+* [Animate.css 3.5.2](https://daneden.github.io/animate.css/)
