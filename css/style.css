@@ -10,6 +10,8 @@ input {
   font-size: 28px; /* Evitar zoom movil */
 }
 
+/* index.html */
+
 #login-btn {
   height: auto;
   width: auto;
@@ -116,10 +118,10 @@ input {
   outline: none;
 }
 
-#search-input:focus {
-  outline: 5px solid silver;
-  outline-offset: -5px;
-}
+  #search-input:focus {
+    outline: 5px solid silver;
+    outline-offset: -5px;
+  }
 
 #search-btn {
   height: 50px;
@@ -259,6 +261,8 @@ input {
 .github-user-link, .github-user-link:hover {
   color: white;
 }
+
+/* bar.html */
 
 #info-bar-logo {
   height: 250px;
@@ -457,23 +461,143 @@ input {
   margin: 20px 0;
 }
 
-#notfound-text {
+.notfound-text {
   display: block;
   font-size: 21px;
   text-align: center;
   margin: 10px;
 }
 
-#notfound-link {
+.notfound-link {
   font-size: 18px;
   color: gray;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
-  #notfound-link:hover {
+  .notfound-link:hover {
     color: black;
   }
+
+/* login.html */
+
+.login-input {
+  height: 50px;
+  width: 790px;
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  font-size: 28px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+  .login-input:focus {
+    outline: 5px solid silver;
+    outline-offset: -5px;
+  }
+
+#login-submit-btn {
+  height: 50px;
+  width: 790px;
+  margin: 10px;
+  font-size: 28px;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+  #login-submit-btn:hover {
+    background-color: dimgray;
+  }
+
+#signup-btn {
+  margin: 10px;
+  font-size: 20px;
+  color: gray;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+  #signup-btn:hover {
+    color: black;
+  }
+
+/* Modal */
+
+#modal-bg {
+	display: none;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	padding: 50px 0 0 0;
+	left: 0;
+	top: 0;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+#age-verification-modal {
+	position: relative;
+	background-color: black;
+	height: auto;
+	width: 540px;
+	margin: 0 auto;
+	text-align: center;
+	border: 20px solid white;
+	box-shadow: 0 5px 30px black;
+}
+
+#modal-logo {
+  height: 150px;
+  width: 150px;
+  display: block;
+  background: url('../media/logo.svg') 0 0 no-repeat;
+  background-size: 100%;
+  background-position: center;
+  margin: 20px auto 50px auto;
+}
+
+.confirm-btn {
+	height: auto;
+	width: 100px;
+	display: inline-block;
+	font-size: 32px;
+	padding: 20px 0;
+	margin: 10px 5px;
+	cursor: pointer;
+	color: white;
+	background-color: black;
+	text-decoration: none;
+	border: 3px solid white;
+	outline: none;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+	.confirm-btn:hover {
+		color: black;
+		background-color: white;
+	}
+
+#age-verification-top-text {
+	display: block;
+	color: white;
+	font-size: 28px;
+	margin: 50px 0 10px 0;
+}
+
+#age-verification-bottom-text {
+	display: block;
+	color: white;
+	font-size: 18px;
+	margin: 10px 0;
+}
 
 /* Librerias */
 

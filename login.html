@@ -3,35 +3,32 @@
   <head>
     <title>We Want Beer</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=600">
+    <meta name="viewport" content="width=830">
     <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/original-bg.css">
-    <link rel="stylesheet" href="css/login.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-    <script src="js/style-toggle.js"></script>
-
-
+    <script src="js/age-verification.js"></script>
   </head>
 
   <body>
-    <label id="style-toggle-switch">
-      <input id="switch-checkbox" type="checkbox" checked="checked">
-      <span id="switch-slider"></span>
-    </label>
+    <script>
+  		var verified = localStorage.getItem("verified");
+  		if (verified == undefined) {
+  			showAgeVerification();
+  		}
+  	</script>
 
     <script>
       var style = localStorage.getItem("style");
       if (style != undefined) {
         if (style == 1) {
           $("link[href='css/original-bg.css']").attr("href", "css/alternative-bg.css");
-          $("#switch-checkbox").attr("checked", false);
         }
       }
     </script>
@@ -39,19 +36,15 @@
     <nav>
       <a id="main-logo" href="index.html" aria-label="Logo de We Want Beer"></a>
     </nav>
-			<div class="loginmodal-container">
-        <form action="index.html" method="post" onsubmit="pwd_handler(this)">
-					<input type="text" name="user" placeholder="Nombre de usuario" maxlength="128" required="" oninvalid="this.setCustomValidity('Ingrese un usuario')" oninput="setCustomValidity('')">
-					<input type="password" name="password" placeholder="Contraseña" maxlength="128" required="" oninvalid="this.setCustomValidity('Ingrese una contraseña')" oninput="setCustomValidity('')">
-          <input type="hidden" name="md5password" value="" />
-					<input type="submit" name="login" class="login loginmodal-submit" value="Ingresar">
-				 </form>
-				 <div class="login-help">
-					<a href="#">¿No tenes cuenta? Registrate</a>
-				 </div>
-			</div>
 
-
+    <div id="main-container">
+      <form>
+        <input class="login-input" type="text" placeholder="Usuario" maxlength="64">
+        <input class="login-input" type="password" placeholder="Contraseña" maxlength="64">
+        <button id="login-submit-btn" type="submit" onclick="return false">Ingresar</button>
+      </form>
+      <a id="signup-btn" href="signup.html">Registrarse</a>
+    </div>
 
     <footer>
         <div id="footer-container">
@@ -64,8 +57,5 @@
           </div>
         </div>
     </footer>
-
-    <script type="text/javascript"src="https://rawgit.com/blueimp/JavaScript-MD5/master/js/md5.min.js"></script>
-    <script src="js/login-actions.js"></script>
   </body>
 </html>

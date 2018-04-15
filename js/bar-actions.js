@@ -8,8 +8,8 @@ $(function() {
     } else {
       var obj = $.grep(data, function(obj){return obj.id === id;})[0]; // Buscar elemento usando jQuery
       if (obj === undefined) { // Si no se encontro el id
-        $("#main-container").html("<span id='notfound-text'>No se pudo encontrar la búsqueda \"" + id + "\"</span>");
-        $("#main-container").append("<span id='notfound-text'><a id='notfound-link' href='index.html'>Volver al inicio</a></span>");
+        $("#main-container").html("<span class='notfound-text'>No se pudo encontrar la búsqueda \"" + id + "\"</span>");
+        $("#main-container").append("<span class='notfound-text'><a class='notfound-link' href='index.html'>Volver al inicio</a></span>");
       } else {
         cerveceria = obj;
         mostrarInfo();
@@ -49,7 +49,7 @@ function mostrarInfo() {
     var weekdays = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
     $("#info-time-text").html("Horario:");
     $("#today-time").prepend(weekdays[hoy] + " " + cerveceria.horario[hoy]);
-    var day = hoy + 1;
+    var day = (hoy + 1) % 7;
     while(day != hoy) {
       $("#hidden-days-list").append("<div>" + weekdays[day] + " " + cerveceria.horario[day] + "</div>");
       day = (day + 1) % 7;

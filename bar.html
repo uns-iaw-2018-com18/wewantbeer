@@ -10,17 +10,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/themes/fontawesome-stars.min.css" integrity="sha256-WFtpL3Xj79cn6l1G5NBnonoySqzhIArAFanE+6xwZ+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha256-j+P6EZJVrbXgwSR5Mx+eCS6FvP9Wq27MBRC/ogVriY0=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/original-bg.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js" integrity="sha256-4G5fW5q6We2bsDSgLCwkfKMFvGx/SbRsZkiNZbhXCvM=" crossorigin="anonymous"></script>
+    <script src="js/age-verification.js"></script>
     <script src="js/bar-actions.js"></script>
     <script src="js/style-toggle.js"></script>
   </head>
 
   <body>
-    <a id="login-btn" href="#" onclick="return false">Ingresar</a>
+    <script>
+  		var verified = localStorage.getItem("verified");
+  		if (verified == undefined) {
+  			showAgeVerification();
+  		}
+  	</script>
+
+    <a id="login-btn" href="login.html">Ingresar</a>
     <label id="style-toggle-switch">
       <input id="switch-checkbox" type="checkbox" checked="true">
       <span id="switch-slider"></span>
