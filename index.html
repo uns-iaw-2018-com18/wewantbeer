@@ -23,10 +23,7 @@
 
   <body>
     <script>
-  		var verified = localStorage.getItem("verified");
-  		if (verified == undefined) {
-  			showAgeVerification();
-  		}
+  		ageVerification();
   	</script>
 
     <a id="login-btn" href="login.html">Ingresar</a>
@@ -36,13 +33,7 @@
     </label>
 
     <script>
-      var style = localStorage.getItem("style");
-      if (style != undefined) {
-        if (style == 1) {
-          $("link[href='css/original-bg.css']").attr("href", "css/alternative-bg.css");
-          $("#switch-checkbox").attr("checked", false);
-        }
-      }
+      setStyle();
     </script>
 
     <nav>

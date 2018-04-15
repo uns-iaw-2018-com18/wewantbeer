@@ -1,3 +1,13 @@
+function setStyle() {
+  var style = localStorage.getItem("style");
+  if (style != undefined) {
+    if (style == 1) {
+      $("link[href='css/original-bg.css']").attr("href", "css/alternative-bg.css");
+      $("#switch-checkbox").attr("checked", false);
+    }
+  }
+}
+
 $(function() {
   $("#switch-checkbox").click(function() {
     if ($("#switch-checkbox").is(":checked")) {

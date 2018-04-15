@@ -14,24 +14,14 @@
     <link rel="stylesheet" href="css/original-bg.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/age-verification.js"></script>
+    <script src="js/style-toggle.js"></script>
   </head>
 
   <body>
     <script>
-  		var verified = localStorage.getItem("verified");
-  		if (verified == undefined) {
-  			showAgeVerification();
-  		}
+  		ageVerification();
+      setStyle();
   	</script>
-
-    <script>
-      var style = localStorage.getItem("style");
-      if (style != undefined) {
-        if (style == 1) {
-          $("link[href='css/original-bg.css']").attr("href", "css/alternative-bg.css");
-        }
-      }
-    </script>
 
     <nav>
       <a id="main-logo" href="index.html" aria-label="Logo de We Want Beer"></a>
