@@ -479,9 +479,9 @@ input {
     color: black;
   }
 
-/* login.html */
+/* login.html / signup.html */
 
-.login-input {
+.login-signup-input {
   height: 50px;
   width: 790px;
   background-color: white;
@@ -492,12 +492,12 @@ input {
   outline: none;
 }
 
-  .login-input:focus {
+  .login-signup-input:focus {
     outline: 5px solid silver;
     outline-offset: -5px;
   }
 
-#login-submit-btn {
+#login-signup-submit-btn {
   height: 50px;
   width: 790px;
   margin: 10px;
@@ -511,21 +511,104 @@ input {
   transition: .4s;
 }
 
-  #login-submit-btn:hover {
+  #login-signup-submit-btn:hover {
     background-color: dimgray;
   }
 
-#signup-btn {
+.login-signup-text {
+  display: block;
   margin: 10px;
+  font-size: 20px;
+  color: gray;
+}
+
+.login-signup-btn {
   font-size: 20px;
   color: gray;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
-  #signup-btn:hover {
+  .login-signup-btn:hover {
     color: black;
   }
+
+.input-warning-icon {
+  display: none;
+  height: 25px;
+  width: 25px;
+  background: url('../media/icons/warning.svg') 0 0 no-repeat;
+  background-size: 100%;
+  background-position: center;
+  border: none;
+  outline: none;
+  text-align: right;
+  position: relative;
+  float: right;
+  margin: -47.5px 30px 0 0;
+}
+
+  .input-warning-icon:focus {
+    outline: none;
+  }
+
+#signup-form {
+  display: none;
+}
+
+.social-login-signup-btn {
+  display: inline-block;
+  height: 60px;
+  width: 385px;
+  margin: 10px;
+  font-size: 22px;
+  text-align: left;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+  .social-login-signup-btn:hover {
+    background-color: dimgray;
+  }
+
+  .social-login-signup-btn:focus {
+    outline: none;
+  }
+
+#google-login-signup {
+  float: right;
+}
+
+#facebook-login-signup:before {
+  content: "";
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  background: url('../media/icons/facebook-w.svg') 0 0 no-repeat;
+  background-size: 100%;
+  background-position: center;
+  margin: 1px 20px 0 10px;
+  vertical-align: middle;
+  float: left;
+}
+
+#google-login-signup:before {
+  content: "";
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  background: url('../media/icons/google-w.svg') 0 0 no-repeat;
+  background-size: 100%;
+  background-position: center;
+  margin: 1px 20px 0 10px;
+  vertical-align: middle;
+  float: left;
+}
 
 /* Modal */
 
@@ -624,4 +707,17 @@ input {
   color: black;
   -webkit-transition: .4s;
   transition: .4s;
+}
+
+.tooltip {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  line-height: 22px;
+  margin: 0 5px 0 0;
+}
+
+.tooltip-inner {
+  max-width: 100%;
+  border-radius: 0;
 }

@@ -41,7 +41,7 @@ function mostrarInfo() {
     $("#info-address-text").hide();
   }
   if (cerveceria.telefono.localeCompare("") != 0) {
-    $("#info-phone-text").html("Teléfono: " + cerveceria.telefono);
+    $("#info-phone-text").html("Teléfono: <a class='info-link' href='tel:" + libphonenumber.formatNumber(cerveceria.telefono, "International").replace(/\s+/g, '-') + "'>" + libphonenumber.formatNumber(cerveceria.telefono, "National") + "</a>");
   } else {
     $("#info-phone-text").hide();
   }

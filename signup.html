@@ -15,6 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/age-verification.js"></script>
     <script src="js/style-toggle.js"></script>
+    <script src="js/login-signup-actions.js"></script>
   </head>
 
   <body>
@@ -28,13 +29,21 @@
     </nav>
 
     <div id="main-container">
-      <form>
-        <input class="login-input" type="text" placeholder="Nombre de usuario" maxlength="64">
-        <input class="login-input" type="text" placeholder="Correo electrónico" maxlength="64">
-        <input class="login-input" type="password" placeholder="Contraseña" maxlength="64">
-        <input class="login-input" type="password" placeholder="Confirmar contraseña" maxlength="64">
-        <button id="login-submit-btn" type="submit" onclick="return false">Registrarse</button>
+      <button id="facebook-login-signup" class="social-login-signup-btn">Registrarse con Facebook</button>
+      <button id="google-login-signup" class="social-login-signup-btn">Registrarse con Google</button>
+      <form id="signup-form">
+        <input class="login-signup-input" type="text" placeholder="Nombre de usuario" maxlength="64">
+        <button class="input-warning-icon" data-toggle="tooltip" data-placement="left" title="Nombre de usuario requerido"></button>
+        <input class="login-signup-input" type="text" placeholder="Correo electrónico" maxlength="64">
+        <button class="input-warning-icon" data-toggle="tooltip" data-placement="left" title="Correo electrónico requerido"></button>
+        <input class="login-signup-input" type="password" placeholder="Contraseña" maxlength="64">
+        <button class="input-warning-icon" data-toggle="tooltip" data-placement="left" title="Contraseña requerida"></button>
+        <input class="login-signup-input" type="password" placeholder="Confirmar contraseña" maxlength="64">
+        <button class="input-warning-icon" data-toggle="tooltip" data-placement="left" title="Confirmación de contraseña requerida"></button>
+        <button id="login-signup-submit-btn" type="submit">Registrarse</button>
       </form>
+      <span class="login-signup-text">Registrate con tu <a id="signup-show" class="login-signup-btn" href="#">correo electrónico</a></span>
+      <span class="login-signup-text">¿Ya tenés cuenta? <a class="login-signup-btn" href="login.html">Ingresá</a></span>
     </div>
 
     <footer>
@@ -48,5 +57,7 @@
           </div>
         </div>
     </footer>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
   </body>
 </html>

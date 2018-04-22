@@ -15,6 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/age-verification.js"></script>
     <script src="js/style-toggle.js"></script>
+    <script src="js/login-signup-actions.js"></script>
   </head>
 
   <body>
@@ -28,12 +29,14 @@
     </nav>
 
     <div id="main-container">
-      <form>
-        <input class="login-input" type="text" placeholder="Usuario" maxlength="64">
-        <input class="login-input" type="password" placeholder="Contraseña" maxlength="64">
-        <button id="login-submit-btn" type="submit" onclick="return false">Ingresar</button>
+      <form id="login-form">
+        <input class="login-signup-input" type="text" placeholder="Usuario" maxlength="64">
+        <button class="input-warning-icon" data-toggle="tooltip" data-placement="left" title="Usuario requerido"></button>
+        <input class="login-signup-input" type="password" placeholder="Contraseña" maxlength="64">
+        <button class="input-warning-icon" data-toggle="tooltip" data-placement="left" title="Contraseña requerida"></button>
+        <button id="login-signup-submit-btn" type="submit">Ingresar</button>
       </form>
-      <a id="signup-btn" href="signup.html">Registrarse</a>
+      <span class="login-signup-text">¿No tenés cuenta? <a class="login-signup-btn" href="signup.html">Registrate</a></span>
     </div>
 
     <footer>
@@ -47,5 +50,7 @@
           </div>
         </div>
     </footer>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
   </body>
 </html>
