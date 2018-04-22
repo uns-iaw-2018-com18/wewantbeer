@@ -7,7 +7,7 @@ $(function () {
     }
   });
   // Cuando se ingresa un caracter en el campo
-  $(".login-signup-input").keypress(function(){
+  $(".login-signup-input").keydown(function() {
     $(this).next("button").hide();
     $(this).css("background-color", "white");
   });
