@@ -12,3 +12,4 @@ Hace uso de:
 * [Font Awesome 4.7.0](https://fontawesome.com/)
 * [Google Fonts](https://fonts.google.com/)
 * [Animate.css 3.5.2](https://daneden.github.io/animate.css/)
+* [libphonenumber-js 1.1.10](https://github.com/catamphetamine/libphonenumber-js)
