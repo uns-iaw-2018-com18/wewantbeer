@@ -36,8 +36,10 @@ function mostrarInfo() {
   $("#info-bar-picture").attr("alt", "Foto " + cerveceria.nombre);
 
   if (cerveceria.direccion.localeCompare("") != 0) {
+    $("#info-directions-btn").attr("href", "https://www.google.com/maps/dir//" + cerveceria.direccion.replace(/\s+/g, '+') + ",+B8000+Bahía+Blanca,+Buenos+Aires/")
     $("#info-address-text").html("Dirección: " + cerveceria.direccion);
   } else {
+    $("#info-directions-btn").hide();
     $("#info-address-text").hide();
   }
   if (cerveceria.telefono.localeCompare("") != 0) {

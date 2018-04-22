@@ -479,6 +479,27 @@ input {
     color: black;
   }
 
+#info-directions-btn {
+  display: block;
+  clear: left;
+  height: auto;
+  width: 140px;
+  font-size: 20px;
+  line-height: 34px;
+  color: black;
+  background-color: whitesmoke;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid silver;
+  margin: 0 0 10px 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+  #info-directions-btn:hover {
+    background-color: gainsboro;
+  }
+
 /* login.html / signup.html */
 
 .login-signup-input {
