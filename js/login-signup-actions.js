@@ -25,15 +25,6 @@ $(function () {
   $(".input-warning-icon").click(function(event) {
     event.preventDefault();
   });
-  // Mostrar formulario de registro y esconder botones
-  $("#signup-show").click(function() {
-    $(this).parent().hide();
-    $(".social-login-signup-btn").each(function() {
-      $(this).hide();
-    });
-    $("#signup-form").show();
-    return false;
-  });
   // Mostrar tooltip
   $("[data-toggle='tooltip']").tooltip();
 });

@@ -573,10 +573,6 @@ input {
     outline: none;
   }
 
-#signup-form {
-  display: none;
-}
-
 .social-login-signup-btn {
   display: inline-block;
   height: 60px;
