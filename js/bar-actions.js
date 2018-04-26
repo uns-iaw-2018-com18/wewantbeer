@@ -149,7 +149,7 @@ $(function() {
 });
 
 function initMap() {
-  var cerveceriaCoordenadas = new google.maps.LatLng(cerveceria.latitud, cerveceria.longitud);
+  var cerveceriaCoordenadas = new google.maps.LatLng(cerveceria.latLong[0], cerveceria.latLong[1]);
   var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 16,
     center: cerveceriaCoordenadas,

@@ -240,15 +240,6 @@ input {
   font-size: 21px;
 }
 
-#code-icon {
-  height: 15px;
-  width: 22px;
-  display: inline-block;
-  background: url('../media/icons/code.svg') 0 0 no-repeat;
-  background-size: 100%;
-  background-position: center;
-}
-
 #love-icon {
   height: 15px;
   width: 17px;

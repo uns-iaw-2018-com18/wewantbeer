@@ -59,7 +59,7 @@ function initMap() {
 }
 
 function agregarMarcador(cerveceria, map) {
-  var point = new google.maps.LatLng(cerveceria.latitud, cerveceria.longitud);
+  var point = new google.maps.LatLng(cerveceria.latLong[0], cerveceria.latLong[1]);
   var contenidoInfoWindow = "<b>" + cerveceria.nombre + "</b><br>" + cerveceria.direccion;
   var infoWindow = new google.maps.InfoWindow({
     size: new google.maps.Size(150, 50),
